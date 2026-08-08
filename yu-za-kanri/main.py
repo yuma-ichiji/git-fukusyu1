@@ -11,6 +11,7 @@ gakunen = st.selectbox("あなたの学年を選択してください", ["小学
 syumi = st.multiselect("あなたの趣味を選択してください", ["読書", "スポーツ", "ゲーム","音楽","絵画","その他"])
 if syumi=="ゲーム":
     st.balloons()
+    st.text("ゲーム作りにも挑戦してみよう")
 if st.button("情報を保存"):
     st.session_state.name=name
     st.session_state.gakunen=gakunen
