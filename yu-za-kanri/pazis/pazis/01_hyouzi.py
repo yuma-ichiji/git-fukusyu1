@@ -1,7 +1,7 @@
 import streamlit as st
 st.title("ユーザー情報")
 if ("name" in st.session_state and st.session_state.name):
-    st.success("✅ 保存されている情報:")
+    st.success("保存されている情報:")
     col1, col2 = st.columns(2)    
     with col1:
         st.metric("名前", st.session_state.name)
