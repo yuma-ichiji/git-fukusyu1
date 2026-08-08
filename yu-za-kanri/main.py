@@ -9,11 +9,11 @@ if "syumi" not in st.session_state:
 name = st.text_input("あなたの名前を入力してください")
 gakunen = st.selectbox("あなたの学年を選択してください", ["小学5年生", "小学6年生", "中学1年生", "中学2年生", "中学3年生"])
 syumi = st.multiselect("あなたの趣味を選択してください", ["読書", "スポーツ", "ゲーム","音楽","絵画","その他"])
-if syumi=="ゲーム":
-    st.balloons()
-    st.text("ゲーム作りにも挑戦してみよう")
 if st.button("情報を保存"):
     st.session_state.name=name
     st.session_state.gakunen=gakunen
     st.session_state.syumi=syumi
     st.success("情報を保存しました")
+if "ゲーム" in syumi:
+    st.write("ゲーム作りにも挑戦してみよう！")
+    st.balloons()

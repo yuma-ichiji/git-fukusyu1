@@ -9,10 +9,17 @@ if st.session_state.get("name"):
 
     if st.button("すべての情報をリセット", type="primary"):
         st.warning("本当にリセットしますか？")
-        st.session_state.name = ""
-        st.session_state.gakunen = ""
-        st.session_state.syumi = []
-        st.success("すべての情報をリセットしました！")
-        st.rerun()
+        if st.button("はい"):
+            st.session_state.name = ""
+            st.session_state.gakunen = ""
+            st.session_state.syumi = []
+            st.success("すべての情報をリセットしました！")
+            st.rerun()
+        if st.button("yes"):
+            st.session_state.name = ""
+            st.session_state.gakunen = ""
+            st.session_state.syumi = []
+            st.success("すべての情報をリセットしました！")
+            st.rerun()
 else:
     st.warning("リセットする情報がありません")
